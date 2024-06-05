@@ -1,0 +1,222 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "environmentName": {
+      "value": "mc-pilo"
+    },
+    "resourceToken": {
+      "value": "[toLower(uniqueString(subscription().id, parameters('environmentName'), parameters('location')))]"
+    },
+    "location": {
+      "value": "westus"
+    },
+    "hostingPlanName": {
+      "value": "[format('hosting-plan-{0}', parameters('resourceToken'))]"
+    },
+    "hostingPlanSku": {
+      "value": "B3"
+    },
+    "skuTier": {
+      "value": "Basic"
+    },
+    "websiteName": {
+      "value": "[format('web-{0}', parameters('resourceToken'))]"
+    },
+    "adminWebsiteName": {
+      "value": "[format('{0}-admin', parameters('websiteName'))]"
+    },
+    "applicationInsightsName": {
+      "value": "[format('appinsights-{0}', parameters('resourceToken'))]"
+    },
+    "workbookDisplayName": {
+      "value": "[format('workbook-{0}', parameters('resourceToken'))]"
+    },
+    "azureSearchUseSemanticSearch": {
+      "value": null
+    },
+    "azureSearchSemanticSearchConfig": {
+      "value": "default"
+    },
+    "azureSearchIndexIsPrechunked": {
+      "value": "false"
+    },
+    "azureSearchTopK": {
+      "value": "5"
+    },
+    "azureSearchEnableInDomain": {
+      "value": "false"
+    },
+    "azureSearchContentColumns": {
+      "value": "content"
+    },
+    "azureSearchVectorColumns": {
+      "value": "content_vector"
+    },
+    "azureSearchFilenameColumn": {
+      "value": "filename"
+    },
+    "azureSearchFilter": {
+      "value": null
+    },
+    "azureSearchTitleColumn": {
+      "value": "title"
+    },
+    "azureSearchUrlColumn": {
+      "value": "url"
+    },
+    "azureSearchUseIntegratedVectorization": {
+      "value": null
+    },
+    "azureOpenAIResourceName": {
+      "value": "[format('openai-{0}', parameters('resourceToken'))]"
+    },
+    "azureOpenAISkuName": {
+      "value": "S0"
+    },
+    "azureOpenAIModel": {
+      "value": "gpt-4o"
+    },
+    "azureOpenAIModelName": {
+      "value": "gpt-4o"
+    },
+    "azureOpenAIModelVersion": {
+      "value": "2024-05-13"
+    },
+    "azureOpenAIModelCapacity": {
+      "value": 30
+    },
+    "useAdvancedImageProcessing": {
+      "value": null
+    },
+    "advancedImageProcessingMaxImages": {
+      "value": 1
+    },
+    "azureOpenAIVisionModel": {
+      "value": "gpt-4"
+    },
+    "azureOpenAIVisionModelName": {
+      "value": "gpt-4"
+    },
+    "azureOpenAIVisionModelVersion": {
+      "value": "vision-preview"
+    },
+    "azureOpenAIVisionModelCapacity": {
+      "value": 10
+    },
+    "orchestrationStrategy": {
+      "value": "openai_function"
+    },
+    "conversationFlow": {
+      "value": "custom"
+    },
+    "azureOpenAITemperature": {
+      "value": "0"
+    },
+    "azureOpenAITopP": {
+      "value": "1"
+    },
+    "azureOpenAIMaxTokens": {
+      "value": "1000"
+    },
+    "azureOpenAIStopSequence": {
+      "value": "\n"
+    },
+    "azureOpenAISystemMessage": {
+      "value": "You are an AI assistant that helps people find information."
+    },
+    "azureOpenAIApiVersion": {
+      "value": "2024-02-01"
+    },
+    "azureOpenAIStream": {
+      "value": "true"
+    },
+    "azureOpenAIEmbeddingModel": {
+      "value": "text-embedding-ada-002"
+    },
+    "azureOpenAIEmbeddingModelName": {
+      "value": "text-embedding-ada-002"
+    },
+    "azureOpenAIEmbeddingModelCapacity": {
+      "value": 30
+    },
+    "computerVisionName": {
+      "value": "[format('computer-vision-{0}', parameters('resourceToken'))]"
+    },
+    "computerVisionSkuName": {
+      "value": "S1"
+    },
+    "computerVisionLocation": {
+      "value": "[if(parameters('useAdvancedImageProcessing'), parameters('location'), '')]"
+    },
+    "computerVisionVectorizeImageApiVersion": {
+      "value": "2024-02-01"
+    },
+    "computerVisionVectorizeImageModelVersion": {
+      "value": "2023-04-15"
+    },
+    "azureAISearchName": {
+      "value": "[format('search-{0}', parameters('resourceToken'))]"
+    },
+    "azureSearchSku": {
+      "value": "standard"
+    },
+    "azureSearchIndex": {
+      "value": "[format('index-{0}', parameters('resourceToken'))]"
+    },
+    "azureSearchIndexer": {
+      "value": "[format('indexer-{0}', parameters('resourceToken'))]"
+    },
+    "azureSearchDatasource": {
+      "value": "[format('datasource-{0}', parameters('resourceToken'))]"
+    },
+    "azureSearchConversationLogIndex": {
+      "value": "conversations"
+    },
+    "storageAccountName": {
+      "value": "[format('str{0}', parameters('resourceToken'))]"
+    },
+    "functionName": {
+      "value": "[format('backend-{0}', parameters('resourceToken'))]"
+    },
+    "formRecognizerName": {
+      "value": "[format('formrecog-{0}', parameters('resourceToken'))]"
+    },
+    "contentSafetyName": {
+      "value": "[format('contentsafety-{0}', parameters('resourceToken'))]"
+    },
+    "speechServiceName": {
+      "value": "[format('speech-{0}', parameters('resourceToken'))]"
+    },
+    "logAnalyticsName": {
+      "value": "[format('la-{0}', parameters('resourceToken'))]"
+    },
+    "newGuidString": {
+      "value": "[newGuid()]"
+    },
+    "searchTag": {
+      "value": "chatwithyourdata-sa"
+    },
+    "useKeyVault": {
+      "value": "[if(equals(parameters('authType'), 'rbac'), false(), true())]"
+    },
+    "principalId": {
+      "value": null
+    },
+    "authType": {
+      "value": "keys"
+    },
+    "hostingModel": {
+      "value": "container"
+    },
+    "logLevel": {
+      "value": "INFO"
+    },
+    "recognizedLanguages": {
+      "value": "en-US,fr-FR,de-DE,it-IT"
+    },
+    "azureMachineLearningName": {
+      "value": "[format('aml-{0}', parameters('resourceToken'))]"
+    }
+  }
+}
