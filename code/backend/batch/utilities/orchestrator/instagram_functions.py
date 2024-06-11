@@ -124,14 +124,14 @@ class InstagramFunctionsOrchestrator(OrchestratorBase):
                         "searchType"
                     ]
                 except:
-                    logger.debug("Failed to retrieve SEARCHTYPE from response")
+                    logger.info("Failed to retrieve SEARCHTYPE from response")
                     searchType = "campaign"
                 try:
                     instagram = json.loads(result.choices[0].message.function_call.arguments)[
                         "instagram"
                     ]
                 except:
-                    logger.debug("Failed to retrieve INSTAGRAM from response")
+                    logger.info("Failed to retrieve INSTAGRAM from response")
                     instagram = ""
 
                 try:
@@ -139,11 +139,11 @@ class InstagramFunctionsOrchestrator(OrchestratorBase):
                         "industry"
                     ]
                 except:
-                    logger.debug("Failed to retrieve INDUSTRY from response")
+                    logger.info("Failed to retrieve INDUSTRY from response")
                     industry = ""
                 # run answering chain
                 answering_tool = CampaignInfluencerTool()
-                logger.debug(f"Search initiated for {searchType} with industry {industry} and instagram {instagram} and question: {question}")
+                logger.info(f"Search initiated for {searchType} with industry {industry} and instagram {instagram} and question: {question}")
                 answer = answering_tool.answer_question(question, chat_history, searchType, instagram, industry)
 
                 self.log_tokens(

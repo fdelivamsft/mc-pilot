@@ -176,6 +176,8 @@ class CampaignInfluencerTool(AnsweringToolBase):
             )
             messages = self.generate_messages(question, source_documents)
 
+        logger.info(f"Messages used to generate prompt for question answer: {messages}")
+
         llm_helper = LLMHelper()
 
         response = llm_helper.get_chat_completion(messages, model=model, temperature=0)
