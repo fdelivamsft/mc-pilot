@@ -17,7 +17,8 @@ Please upload the files campaigns.txt and influencers.txt in the admin website.
 ### Questions:
 
 1. Commonwealth bank asked us to create a campaign for the new digital banking app in Singapore
-2. Can you help me sarch for similar campaigns?
+2. Can you help me find the most similar campaigns done in the past?
+3. can you find the metrics of this influencer: @jazzyJaxon ?
 
 ### Screenshot
 ![Testing screenshot](/docs/images/screenshot1.png)
