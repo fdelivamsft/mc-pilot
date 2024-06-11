@@ -1,0 +1,400 @@
+[  
+    {  
+        "igHandle": "@starrySkylar",  
+        "Campaign_Name": "HealthCorp FitLife National Health Campaign",  
+        "Year": 2023,  
+        "contentType": "Reel",  
+        "noOfReach": 57200,  
+        "engagementByFollowers": "7.68%",  
+        "estimatedRates": "$2,824",  
+        "sps": 0.831036,  
+        "pubLink": "https://www.instagram.com/p/CqcomGBPlPJ/",  
+        "industry": "health"  
+    }, \n \n  
+
+    {  
+        "igHandle": "@glamMaddox",  
+        "Campaign_Name": "BankTrust WealthGuard Savings Initiative",  
+        "Year": 2022,  
+        "contentType": "Image",  
+        "noOfReach": 12100,  
+        "engagementByFollowers": "4.49%",  
+        "estimatedRates": "$500",  
+        "sps": 0.814857,  
+        "pubLink": "https://www.instagram.com/p/CRa9R6Pj6c9/",  
+        "industry": "banking"  
+    }, \n \n  
+
+    {  
+        "igHandle": "@jazzyJaxon",  
+        "Campaign_Name": "Sportify ActiveLife Marathon Campaign",  
+        "Year": 2024,  
+        "contentType": "Image",  
+        "noOfReach": 19700,  
+        "engagementByFollowers": "0.69%",  
+        "estimatedRates": "$3,000",  
+        "sps": 0.740509,  
+        "pubLink": "https://www.instagram.com/p/Cvtoz9jPziJ/",  
+        "industry": "sports"  
+    }, \n \n  
+
+    {  
+        "igHandle": "@radiantRiley",  
+        "Campaign_Name": "BabyJoy HappyTots Playtime Initiative",  
+        "Year": 2021,  
+        "contentType": "Image",  
+        "noOfReach": 15600,  
+        "engagementByFollowers": "1.91%",  
+        "estimatedRates": "$500",  
+        "sps": 0.627525,  
+        "pubLink": "https://www.instagram.com/p/CvLNoBJKZVl/",  
+        "industry": "baby"  
+    }, \n \n 
+ 
+    {  
+        "igHandle": "@stellarSloane",  
+        "Campaign_Name": "ToyWorld FunPlay Adventure Series",  
+        "Year": 2023,  
+        "contentType": "Reel",  
+        "noOfReach": 31400,  
+        "engagementByFollowers": "4.10%",  
+        "estimatedRates": "$2,824",  
+        "sps": 0.616562,  
+        "pubLink": "https://www.instagram.com/p/Cvlc-7hj2tJ/",  
+        "industry": "toys"  
+    }, \n \n  
+
+    {  
+        "igHandle": "@cosmicCaden",  
+        "Campaign_Name": "HealthCorp FitLife National Health Campaign",  
+        "Year": 2022,  
+        "contentType": "Reel",  
+        "noOfReach": 35000,  
+        "engagementByFollowers": "1.79%",  
+        "estimatedRates": "$1,800",  
+        "sps": 0.563851,  
+        "pubLink": "https://www.instagram.com/p/CvX2NsT1r8o/",  
+        "industry": "health"  
+    }, \n \n  
+
+    {  
+        "igHandle": "@dazzlingDylan",  
+        "Campaign_Name": "BankTrust WealthGuard Savings Initiative",  
+        "Year": 2023,  
+        "contentType": "Reel",  
+        "noOfReach": 11200,  
+        "engagementByFollowers": "1.33%",  
+        "estimatedRates": "$2,235",  
+        "sps": 0.554218,  
+        "pubLink": "https://www.instagram.com/reel/Cu88LRLr2oJ/?igshid=NTc4MTIwNjQ2YQ==",  
+        "industry": "banking"  
+    }, \n \n  
+
+    {  
+        "igHandle": "@vividVivian",  
+        "Campaign_Name": "Sportify ActiveLife Marathon Campaign",  
+        "Year": 2024,  
+        "contentType": "Reel",  
+        "noOfReach": 42500,  
+        "engagementByFollowers": "3.87%",  
+        "estimatedRates": "$4,412",  
+        "sps": 0.529832,  
+        "pubLink": "https://www.instagram.com/p/C2b93kmvGao/",  
+        "industry": "sports"  
+    }, \n \n  
+
+    {  
+        "igHandle": "@electricEmery",  
+        "Campaign_Name": "BabyJoy HappyTots Playtime Initiative",  
+        "Year": 2023,  
+        "contentType": "Reel",  
+        "noOfReach": 31900,  
+        "engagementByFollowers": "2.45%",  
+        "estimatedRates": "$1,765",  
+        "sps": 0.523019,  
+        "pubLink": "https://www.instagram.com/reel/CubXhvUMb3/?igshid=MzRlODBiNWFIZA==",  
+        "industry": "baby"  
+    }, \n \n  
+
+    {  
+        "igHandle": "@luminousLuca",  
+        "Campaign_Name": "ToyWorld FunPlay Adventure Series",  
+        "Year": 2022,  
+        "contentType": "Image",  
+        "noOfReach": 25000,  
+        "engagementByFollowers": "3.69%",  
+        "estimatedRates": "$500",  
+        "sps": 0.517113,  
+        "pubLink": "https://www.instagram.com/p/CVcPwWPGPMZ/",  
+        "industry": "toys"  
+    }  
+]
+
+
+
+[  
+    {  
+        "igHandle": "@majesticMilo",  
+        "Campaign_Name": "HealthCorp WellnessPlus Fitness Drive",  
+        "Year": 2024,  
+        "contentType": "Reel",  
+        "noOfReach": 28400,  
+        "engagementByFollowers": "1.47%",  
+        "estimatedRates": "$1,900",  
+        "sps": 0.495032,  
+        "pubLink": "https://www.instagram.com/reel/CXgAzuBA89s/",  
+        "industry": "health"  
+    }, \n \n  
+
+    {  
+        "igHandle": "@radiantRowan",  
+        "Campaign_Name": "BabyJoy CareNest Baby Essentials",  
+        "Year": 2023,  
+        "contentType": "Image",  
+        "noOfReach": 18700,  
+        "engagementByFollowers": "2.51%",  
+        "estimatedRates": "$2,600",  
+        "sps": 0.689742,  
+        "pubLink": "https://www.instagram.com/p/Cvtoz9jPziJ/",  
+        "industry": "baby"  
+    }, \n \n  
+
+    {  
+        "igHandle": "@glitzGio",  
+        "Campaign_Name": "BankTrust SavingsSmart Financial Literacy",  
+        "Year": 2022,  
+        "contentType": "Image",  
+        "noOfReach": 22100,  
+        "engagementByFollowers": "3.12%",  
+        "estimatedRates": "$1,400",  
+        "sps": 0.758312,  
+        "pubLink": "https://www.instagram.com/p/CRa9R6Pj6c9/",  
+        "industry": "banking"  
+    }, \n \n  
+
+    {  
+        "igHandle": "@shimmerShay",  
+        "Campaign_Name": "ToyWorld FunPlay Outdoor Adventure",  
+        "Year": 2024,  
+        "contentType": "Reel",  
+        "noOfReach": 31400,  
+        "engagementByFollowers": "4.10%",  
+        "estimatedRates": "$3,200",  
+        "sps": 0.714562,  
+        "pubLink": "https://www.instagram.com/p/Cvlc-7hj2tJ/",  
+        "industry": "toys"  
+    }, \n \n  
+
+    {  
+        "igHandle": "@sparkleSage",  
+        "Campaign_Name": "Sportify ActiveLife Kids Marathon",  
+        "Year": 2021,  
+        "contentType": "Reel",  
+        "noOfReach": 29000,  
+        "engagementByFollowers": "2.89%",  
+        "estimatedRates": "$2,100",  
+        "sps": 0.652471,  
+        "pubLink": "https://www.instagram.com/p/CvX2NsT1r8o/",  
+        "industry": "sports"  
+    }, \n \n  
+
+    {  
+        "igHandle": "@twinkleTate",  
+        "Campaign_Name": "HealthCorp FitLife Family Health",  
+        "Year": 2022,  
+        "contentType": "Image",  
+        "noOfReach": 17500,  
+        "engagementByFollowers": "1.75%",  
+        "estimatedRates": "$1,800",  
+        "sps": 0.589742,  
+        "pubLink": "https://www.instagram.com/p/CvLNoBJKZVl/",  
+        "industry": "health"  
+    }, \n \n  
+
+    {  
+        "igHandle": "@glowGrayson",  
+        "Campaign_Name": "BabyJoy HappyTots Newborn Care",  
+        "Year": 2023,  
+        "contentType": "Reel",  
+        "noOfReach": 26500,  
+        "engagementByFollowers": "3.10%",  
+        "estimatedRates": "$2,900",  
+        "sps": 0.671932,  
+        "pubLink": "https://www.instagram.com/p/Cvlc-7hj2tJ/",  
+        "industry": "baby"  
+    }, \n \n  
+
+    {  
+        "igHandle": "@flashFinley",  
+        "Campaign_Name": "BankTrust WealthGuard Youth Savings",  
+        "Year": 2024,  
+        "contentType": "Image",  
+        "noOfReach": 38000,  
+        "engagementByFollowers": "2.35%",  
+        "estimatedRates": "$2,500",  
+        "sps": 0.729851,  
+        "pubLink": "https://www.instagram.com/p/C2b93kmvGao/",  
+        "industry": "banking"  
+    }, \n \n  
+
+    {  
+        "igHandle": "@gleamGage",  
+        "Campaign_Name": "ToyWorld FunPlay Indoor Games",  
+        "Year": 2021,  
+        "contentType": "Image",  
+        "noOfReach": 30500,  
+        "engagementByFollowers": "3.00%",  
+        "estimatedRates": "$2,000",  
+        "sps": 0.641582,  
+        "pubLink": "https://www.instagram.com/p/CRa9R6Pj6c9/",  
+        "industry": "toys"  
+    }, \n \n  
+
+    {  
+        "igHandle": "@shineShiloh",  
+        "Campaign_Name": "Sportify ActiveLife Summer Camps",  
+        "Year": 2022,  
+        "contentType": "Reel",  
+        "noOfReach": 25000,  
+        "engagementByFollowers": "1.90%",  
+        "estimatedRates": "$1,700",  
+        "sps": 0.612475,  
+        "pubLink": "https://www.instagram.com/reel/CubXhvUMb3/?igshid=MzRlODBiNWFIZA==",  
+        "industry": "sports"  
+    }  
+]  
+
+
+
+
+[  
+    {  
+        "igHandle": "@brightBriar",  
+        "Campaign_Name": "HealthCorp VitalityPlus Wellness Drive",  
+        "Year": 2024,  
+        "contentType": "Image",  
+        "noOfReach": 27500,  
+        "engagementByFollowers": "2.95%",  
+        "estimatedRates": "$3,100",  
+        "sps": 0.752314,  
+        "pubLink": "https://www.instagram.com/p/CVcPwWPGPMZ/",  
+        "industry": "health"  
+    }, \n \n  
+
+    {  
+        "igHandle": "@radiantRemi",  
+        "Campaign_Name": "BabyJoy LittleSteps Baby Care",  
+        "Year": 2023,  
+        "contentType": "Reel",  
+        "noOfReach": 23500,  
+        "engagementByFollowers": "3.20%",  
+        "estimatedRates": "$2,800",  
+        "sps": 0.684215,  
+        "pubLink": "https://www.instagram.com/reel/CXgAzuBA89s/",  
+        "industry": "baby"  
+    }, \n \n  
+
+    {  
+        "igHandle": "@glitterGwen",  
+        "Campaign_Name": "BankTrust SecureFuture Investment Plan",  
+        "Year": 2022,  
+        "contentType": "Image",  
+        "noOfReach": 21500,  
+        "engagementByFollowers": "2.75%",  
+        "estimatedRates": "$2,100",  
+        "sps": 0.713452,  
+        "pubLink": "https://www.instagram.com/p/Cvtoz9jPziJ/",  
+        "industry": "banking"  
+    }, \n \n  
+
+    {  
+        "igHandle": "@sparklySawyer",  
+        "Campaign_Name": "ToyWorld Playland Fun Festival",  
+        "Year": 2021,  
+        "contentType": "Reel",  
+        "noOfReach": 32500,  
+        "engagementByFollowers": "4.25%",  
+        "estimatedRates": "$3,500",  
+        "sps": 0.728524,  
+        "pubLink": "https://www.instagram.com/p/CRa9R6Pj6c9/",  
+        "industry": "toys"  
+    }, \n \n 
+ 
+    {  
+        "igHandle": "@brilliantBlaire",  
+        "Campaign_Name": "Sportify ActiveLife Winter Sports",  
+        "Year": 2024,  
+        "contentType": "Image",  
+        "noOfReach": 28500,  
+        "engagementByFollowers": "3.10%",  
+        "estimatedRates": "$2,900",  
+        "sps": 0.692745,  
+        "pubLink": "https://www.instagram.com/p/Cvlc-7hj2tJ/",  
+        "industry": "sports"  
+    }, \n \n  
+
+    {  
+        "igHandle": "@dazzlingDrew",  
+        "Campaign_Name": "HealthCorp WellnessPlus Health Check",  
+        "Year": 2022,  
+        "contentType": "Reel",  
+        "noOfReach": 27500,  
+        "engagementByFollowers": "2.90%",  
+        "estimatedRates": "$3,000",  
+        "sps": 0.719854,  
+        "pubLink": "https://www.instagram.com/p/CvX2NsT1r8o/",  
+        "industry": "health"  
+    }, \n \n  
+
+    {  
+        "igHandle": "@radiantReese",  
+        "Campaign_Name": "BabyJoy TinySteps Early Years",  
+        "Year": 2023,  
+        "contentType": "Image",  
+        "noOfReach": 30500,  
+        "engagementByFollowers": "3.30%",  
+        "estimatedRates": "$3,200",  
+        "sps": 0.741256,  
+        "pubLink": "https://www.instagram.com/p/CvLNoBJKZVl/",  
+        "industry": "baby"  
+    }, \n \n  
+
+    {  
+        "igHandle": "@glowGio",  
+        "Campaign_Name": "BankTrust FutureSavings Youth Campaign",  
+        "Year": 2024,  
+        "contentType": "Reel",  
+        "noOfReach": 29500,  
+        "engagementByFollowers": "3.05%",  
+        "estimatedRates": "$2,900",  
+        "sps": 0.705214,  
+        "pubLink": "https://www.instagram.com/p/C2b93kmvGao/",  
+        "industry": "banking"  
+    }, \n \n  
+
+    {  
+        "igHandle": "@gleamGio",  
+        "Campaign_Name": "ToyWorld FunPlay Summer Series",  
+        "Year": 2021,  
+        "contentType": "Image",  
+        "noOfReach": 24500,  
+        "engagementByFollowers": "2.85%",  
+        "estimatedRates": "$2,700",  
+        "sps": 0.671523,  
+        "pubLink": "https://www.instagram.com/p/CRa9R6Pj6c9/",  
+        "industry": "toys"  
+    }, \n \n  
+
+    {  
+        "igHandle": "@flashFin",  
+        "Campaign_Name": "Sportify ActiveLife Spring Marathon",  
+        "Year": 2022,  
+        "contentType": "Reel",  
+        "noOfReach": 27500,  
+        "engagementByFollowers": "2.95%",  
+        "estimatedRates": "$3,100",  
+        "sps": 0.728452,  
+        "pubLink": "https://www.instagram.com/reel/CubXhvUMb3/?igshid=MzRlODBiNWFIZA==",  
+        "industry": "sports"  
+    }  
+]

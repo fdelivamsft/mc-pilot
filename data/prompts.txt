@@ -1,0 +1,17 @@
+can you please generate a list of 50 random igHandle with fake celebrity names, with also follower count and AQS.  
+Followers count should be random from 20000 to 10 millions; AQS is a value between 50 and 100.  
+THe list should be a JSON with 50 elements with attributes igHandle,followerCount,aqs
+
+
+UPLOADED IMAGE
+Given the image provided and the list of igHandle created.
+Can you please generate JSON with similar data, using only the igHandle previously generated and adding also an attribute called industry that can have the following values: banking, health, toys, baby, sports.
+Make sure that the Campaign_Name is a new one structured in this way: <Company Name> <brandName> <campaign name> ; make sure the campaign name is related to the selected industry.
+The list should have 10 random values
+
+
+{
+  "search": "*",
+  "select": "id,content,metadata,title,source,chunk",
+  "filter": "title eq '/documents/campaigns.txt'"
+}
