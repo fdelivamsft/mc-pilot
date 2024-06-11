@@ -72,7 +72,7 @@ class AzureSearchHandler(SearchHandlerBase):
             filter=f"source eq '{blob_url}_SAS_TOKEN_PLACEHOLDER_'",
         )
 
-    def query_search(self, question) -> List[SourceDocument]:
+    def query_search(self, question, filter) -> List[SourceDocument]:
         encoding = tiktoken.get_encoding(self._ENCODER_NAME)
         tokenised_question = encoding.encode(question)
 
@@ -89,7 +89,7 @@ class AzureSearchHandler(SearchHandlerBase):
             )
         else:
             results = self._hybrid_search(
-                question, tokenised_question, vectorized_question
+                question, tokenised_question, vectorized_question, filter
             )
 
         return self._convert_to_source_documents(results)
@@ -133,6 +133,7 @@ class AzureSearchHandler(SearchHandlerBase):
         question: str,
         tokenised_question: list[int],
         vectorized_question: list[float] | None,
+        filter: str = "",
     ):
         return self.search_client.search(
             search_text=question,
@@ -140,7 +141,7 @@ class AzureSearchHandler(SearchHandlerBase):
                 VectorizedQuery(
                     vector=self.llm_helper.generate_embeddings(tokenised_question),
                     k_nearest_neighbors=self.env_helper.AZURE_SEARCH_TOP_K,
-                    filter=self.env_helper.AZURE_SEARCH_FILTER,
+                    filter=filter,
                     fields=self._VECTOR_FIELD,
                 ),
                 *(
@@ -156,7 +157,7 @@ class AzureSearchHandler(SearchHandlerBase):
                 ),
             ],
             query_type="simple",  # this is the default value
-            filter=self.env_helper.AZURE_SEARCH_FILTER,
+            filter=filter,
             top=self.env_helper.AZURE_SEARCH_TOP_K,
         )
 

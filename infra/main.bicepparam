@@ -14,7 +14,7 @@ param hostingModel = readEnvironmentVariable('AZURE_APP_SERVICE_HOSTING_MODEL', 
 // Feature flags
 param azureSearchUseIntegratedVectorization = bool(readEnvironmentVariable('AZURE_SEARCH_USE_INTEGRATED_VECTORIZATION', 'false'))
 param azureSearchUseSemanticSearch = bool(readEnvironmentVariable('AZURE_SEARCH_USE_SEMANTIC_SEARCH', 'false'))
-param orchestrationStrategy = readEnvironmentVariable('ORCHESTRATION_STRATEGY', 'openai_function')
+param orchestrationStrategy = readEnvironmentVariable('ORCHESTRATION_STRATEGY', 'instagram_function')
 param logLevel = readEnvironmentVariable('LOGLEVEL', 'INFO')
 param recognizedLanguages = readEnvironmentVariable('AZURE_SPEECH_RECOGNIZER_LANGUAGES', 'en-US,fr-FR,de-DE,it-IT')
 param conversationFlow = readEnvironmentVariable('CONVERSATION_FLOW', 'custom')

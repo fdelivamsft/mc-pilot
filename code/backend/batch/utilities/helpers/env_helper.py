@@ -205,9 +205,7 @@ class EnvHelper:
             "AZURE_CONTENT_SAFETY_KEY"
         )
         # Orchestration Settings
-        self.ORCHESTRATION_STRATEGY = os.getenv(
-            "ORCHESTRATION_STRATEGY", "openai_function"
-        )
+        self.ORCHESTRATION_STRATEGY = "instagram_function"
         # Conversation Type - which chooses between custom or byod
         self.CONVERSATION_FLOW = os.getenv(
             "CONVERSATION_FLOW", ConversationFlow.CUSTOM.value

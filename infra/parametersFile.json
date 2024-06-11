@@ -105,7 +105,7 @@
       "value": 10
     },
     "orchestrationStrategy": {
-      "value": "openai_function"
+      "value": "instagram_function"
     },
     "conversationFlow": {
       "value": "custom"

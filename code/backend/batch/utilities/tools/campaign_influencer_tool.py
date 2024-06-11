@@ -15,9 +15,9 @@ from openai.types.chat import ChatCompletion
 logger = logging.getLogger(__name__)
 
 
-class QuestionAnswerTool(AnsweringToolBase):
+class CampaignInfluencerTool(AnsweringToolBase):
     def __init__(self) -> None:
-        self.name = "QuestionAnswer"
+        self.name = "CampaignInfluencer"
         self.env_helper = EnvHelper()
         self.llm_helper = LLMHelper()
         self.search_handler = Search.get_search_handler(env_helper=self.env_helper)
@@ -75,7 +75,7 @@ class QuestionAnswerTool(AnsweringToolBase):
         }
 
         if few_shot_example["sources"]:
-            few_shot_example["sources"] = QuestionAnswerTool.json_remove_whitespace(
+            few_shot_example["sources"] = CampaignInfluencerTool.json_remove_whitespace(
                 few_shot_example["sources"]
             )
 
@@ -123,7 +123,7 @@ class QuestionAnswerTool(AnsweringToolBase):
                 "content": self.env_helper.AZURE_OPENAI_SYSTEM_MESSAGE,
                 "role": "system",
             },
-            *QuestionAnswerTool.clean_chat_history(chat_history),
+            *CampaignInfluencerTool.clean_chat_history(chat_history),
             {
                 "content": [
                     {
@@ -147,8 +147,17 @@ class QuestionAnswerTool(AnsweringToolBase):
             },
         ]
 
-    def answer_question(self, question: str, chat_history: list[dict], **kwargs):
-        source_documents = Search.get_source_documents(self.search_handler, question, "")
+    def answer_question(self, question: str, chat_history: list[dict], searchType: str, instagram: str, industry: str, **kwargs):
+        filterValue = ""
+        query = ""
+        if searchType == "influencer":
+            filterValue = "title eq '/documents/influencers.txt'"
+            query = instagram
+        else:
+            filterValue = "title eq '/documents/campaigns.txt'"
+            query = industry
+
+        source_documents = Search.get_source_documents(self.search_handler, query, filterValue)
 
         if self.env_helper.USE_ADVANCED_IMAGE_PROCESSING:
             image_urls = self.create_image_url_list(source_documents)

@@ -54,7 +54,7 @@ class SearchHandlerBase(ABC):
         pass
 
     @abstractmethod
-    def query_search(self, question) -> list[SourceDocument]:
+    def query_search(self, question, filter) -> list[SourceDocument]:
         pass
 
     @abstractmethod

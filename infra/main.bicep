@@ -125,14 +125,15 @@ param azureOpenAIVisionModelVersion string = 'vision-preview'
 @description('Azure OpenAI Vision Model Capacity - See here for more info  https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/quota')
 param azureOpenAIVisionModelCapacity int = 10
 
-@description('Orchestration strategy: openai_function or semantic_kernel or langchain str. If you use a old version of turbo (0301), please select langchain')
+@description('Orchestration strategy: instagram_function or semantic_kernel or langchain str. If you use a old version of turbo (0301), please select langchain')
 @allowed([
   'openai_function'
+  'instagram_function'
   'semantic_kernel'
   'langchain'
   'prompt_flow'
 ])
-param orchestrationStrategy string = 'openai_function'
+param orchestrationStrategy string = 'instagram_function'
 
 @description('Chat conversation type: custom or byod.')
 @allowed([

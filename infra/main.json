@@ -266,15 +266,16 @@
     },
     "orchestrationStrategy": {
       "type": "string",
-      "defaultValue": "openai_function",
+      "defaultValue": "instagram_function",
       "allowedValues": [
         "openai_function",
+        "instagram_function",
         "semantic_kernel",
         "langchain",
         "prompt_flow"
       ],
       "metadata": {
-        "description": "Orchestration strategy: openai_function or semantic_kernel or langchain str. If you use a old version of turbo (0301), please select langchain"
+        "description": "Orchestration strategy: instagram_function or semantic_kernel or langchain str. If you use a old version of turbo (0301), please select langchain"
       }
     },
     "conversationFlow": {

@@ -17,6 +17,6 @@ class Search:
 
     @staticmethod
     def get_source_documents(
-        search_handler: SearchHandlerBase, question: str
+        search_handler: SearchHandlerBase, question: str, filter=""
     ) -> list[SourceDocument]:
-        return search_handler.query_search(question)
+        return search_handler.query_search(question, filter)
