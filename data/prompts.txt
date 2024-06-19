@@ -1,5 +1,5 @@
-can you please generate a list of 50 random igHandle with fake celebrity names, with also follower count and AQS.  
-Followers count should be random from 20000 to 10 millions; AQS is a value between 50 and 100.  
+can you please generate a list of 50 random igHandle with fake celebrity names, with also follower count and AQS.
+Followers count should be random from 20000 to 10 millions; AQS is a value between 50 and 100.
 THe list should be a JSON with 50 elements with attributes igHandle,followerCount,aqs
 
 
@@ -15,3 +15,55 @@ The list should have 10 random values
   "select": "id,content,metadata,title,source,chunk",
   "filter": "title eq '/documents/campaigns.txt'"
 }
+
+
+Prompt for campaigns:
+I need a json list with this structure and 10 values
+{
+   "igHandle": "@gleamGio",
+   "Campaign_Name": "ToyWorld FunPlay Summer Series",
+   "Year": 2021,
+   "contentType": "Image",
+   "noOfReach": 24500,
+   "engagementByFollowers": "2.85%",
+   "estimatedRates": "$2,700",
+   "sps": 0.671523,
+   "pubLink": "https://www.instagram.com/p/CRa9R6Pj6c9/",
+   "industry": "toys"
+    },{
+   "igHandle": "@flashFin",
+   "Campaign_Name": "Sportify ActiveLife Spring Marathon",
+   "Year": 2022,
+   "contentType": "Reel",
+   "noOfReach": 27500,
+   "engagementByFollowers": "2.95%",
+   "estimatedRates": "$3,100",
+   "sps": 0.728452,
+   "pubLink": "https://www.instagram.com/reel/CubXhvUMb3/?igshid=MzRlODBiNWFIZA==",
+   "industry": "sports"
+    }
+You should create new elements using this list of influencer handlers igHandle:
+{"igHandle": "@starrySkylar", "followerCount": 2387654, "aqs": 82}, \n \n
+    {"igHandle": "@glamMaddox", "followerCount": 6543210, "aqs": 75}, \n \n
+    {"igHandle": "@jazzyJaxon", "followerCount": 1234567, "aqs": 91}, \n \n
+    {"igHandle": "@radiantRiley", "followerCount": 8765432, "aqs": 69}, \n \n
+    {"igHandle": "@stellarSloane", "followerCount": 3456789, "aqs": 85}, \n \n
+    {"igHandle": "@cosmicCaden", "followerCount": 5678901, "aqs": 78}, \n \n
+    {"igHandle": "@dazzlingDylan", "followerCount": 4321098, "aqs": 88}, \n \n
+    {"igHandle": "@vividVivian", "followerCount": 7654321, "aqs": 72}, \n \n
+    {"igHandle": "@electricEmery", "followerCount": 9876543, "aqs": 94}, \n \n
+    {"igHandle": "@luminousLuca", "followerCount": 2345678, "aqs": 81}, \n \n
+    {"igHandle": "@majesticMilo", "followerCount": 5678902, "aqs": 65}, \n \n
+    {"igHandle": "@radiantRowan", "followerCount": 8765433, "aqs": 79}, \n \n
+    {"igHandle": "@glitzGio", "followerCount": 3456790, "aqs": 93}, \n \n
+    {"igHandle": "@shimmerShay", "followerCount": 1234568, "aqs": 87}, \n \n
+    {"igHandle": "@sparkleSage", "followerCount": 6543211, "aqs": 73}, \n \n
+    {"igHandle": "@twinkleTate", "followerCount": 2345679, "aqs": 80}, \n \n
+    {"igHandle": "@glowGrayson", "followerCount": 4321099, "aqs": 91}, \n \n
+    {"igHandle": "@flashFinley", "followerCount": 8765434, "aqs": 68}, \n \n
+    {"igHandle": "@gleamGage", "followerCount": 9876544, "aqs": 84}, \n \n
+    {"igHandle": "@shineShiloh", "followerCount": 5678903, "aqs": 76}, \n \n
+    {"igHandle": "@brightBriar", "followerCount": 1234569, "aqs": 89}, \n \n
+    {"igHandle": "@radiantRemi", "followerCount": 7654322, "aqs": 95}, \n \n
+Industry field can have the following values only: banking, health, toys, baby, sports.
+Make sure that the Campaign_Name is a new one structured in this way: <Company Name> <brandName> <campaign name> ; make sure the campaign name is related to the selected industry.

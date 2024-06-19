@@ -127,6 +127,16 @@ class AzureSearchHelper:
                 filterable=True,
             ),
             SimpleField(
+                name="category",
+                type=SearchFieldDataType.Int32,
+                filterable=True,
+            ),
+            SimpleField(
+                name="industry",
+                type=SearchFieldDataType.String,
+                filterable=True,
+            ),
+            SimpleField(
                 name="offset",
                 type=SearchFieldDataType.Int32,
                 filterable=True,
