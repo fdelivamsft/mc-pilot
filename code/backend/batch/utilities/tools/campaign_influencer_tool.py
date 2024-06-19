@@ -64,7 +64,8 @@ class CampaignInfluencerTool(AnsweringToolBase):
         question: str,
         chat_history: list[dict],
         sources: list[SourceDocument],
-        image_urls: list[str] = [],
+        systemPrompt: str,
+        image_urls: list[str] = []
     ) -> list[dict]:
         examples = []
 
@@ -115,7 +116,7 @@ class CampaignInfluencerTool(AnsweringToolBase):
 
         return [
             {
-                "content": self.config.prompts.answering_system_prompt,
+                "content": systemPrompt,
                 "role": "system",
             },
             *examples,
@@ -147,15 +148,27 @@ class CampaignInfluencerTool(AnsweringToolBase):
             },
         ]
 
-    def answer_question(self, question: str, chat_history: list[dict], searchType: str, instagram: str, industry: str, **kwargs):
+    def answer_question(self, question: str, campaignKeywords: str, chat_history: list[dict], searchType: str, instagram: str, industry: str, **kwargs):
         filterValue = ""
         query = ""
+        systemPrompt = self.config.prompts.answering_system_prompt
         if searchType == "influencer":
-            filterValue = "title eq '/documents/influencers.txt'"
+            # Search for influencer
+            filterValue = "category eq 1"
             query = instagram
+            systemPrompt = self.config.prompts.answering_system_prompt + """
+                When analyzing an influencer, the follower count is usually a good indicator of their reach.
+                An instagram profile with less than 1 milion followers is considered for a niche, while above 10M is for a mass audience.
+                AQS stands for Audience Quality Score, which is a metric that helps to determine the quality of an influencer's audience, the highest value is 100, above 50 is acceptable, below is not.
+            """
         else:
-            filterValue = "title eq '/documents/campaigns.txt'"
-            query = industry
+            # Search for similar campaigns
+            filterValue = f"category eq 0 and industry eq '{industry}'"
+            query = campaignKeywords
+            systemPrompt = self.config.prompts.answering_system_prompt + """
+                When analyzing a campaign, the engagement rate is a good indicator of the campaign success.
+                Please order the results based on the engagement rate and the similarity with the customer request.
+            """
 
         source_documents = Search.get_source_documents(self.search_handler, query, filterValue)
 
@@ -168,7 +181,7 @@ class CampaignInfluencerTool(AnsweringToolBase):
 
         if self.config.prompts.use_on_your_data_format:
             messages = self.generate_on_your_data_messages(
-                question, chat_history, source_documents, image_urls
+                question, chat_history, source_documents, systemPrompt, image_urls
             )
         else:
             warnings.warn(

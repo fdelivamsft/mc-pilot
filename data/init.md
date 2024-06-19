@@ -1,14 +1,14 @@
 ### data guidelines
 
 This example works only with two files:
-- influencers.txt
-- campaigns.txt
+- influencers.json
+- campaigns.json
 
-The name is important because of the filter used to search inside the DB:
+The category is important because of the filter used to search inside the DB:
 {
   "search": "*",
   "select": "id,content,metadata,title,source,chunk",
-  "filter": "title eq '/documents/campaigns.txt'"
+  "filter": "category eq 0" ## 0 filter all the campaign, while 1 filters all the influencers
 }
 
 Please check the prompts to see how they were generated.

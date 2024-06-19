@@ -7,6 +7,7 @@ from ..helpers.llm_helper import LLMHelper
 from ..tools.post_prompt_tool import PostPromptTool
 from ..tools.campaign_influencer_tool import CampaignInfluencerTool
 from ..tools.text_processing_tool import TextProcessingTool
+from ..tools.greetings_tool import GreetingsProcessingTool
 from ..tools.brief_tool import BriefTool
 from ..common.answer import Answer
 
@@ -18,6 +19,11 @@ class InstagramFunctionsOrchestrator(OrchestratorBase):
         super().__init__()
         self.functions = [
             {
+                "name": "greetings",
+                "description": "How to answer when the user is saying hello or asking more info on how this product works",
+                "parameters": {}
+            },
+            {
                 "name": "search_documents",
                 "description": "Search for similar campaigns or influencer performance in the database.",
                 "parameters": {
@@ -27,9 +33,13 @@ class InstagramFunctionsOrchestrator(OrchestratorBase):
                             "type": "string",
                             "description": "A standalone question, converted from the chat history",
                         },
+                        "campaignKeywords": {
+                            "type": "string",
+                            "description": "a list of relevant keywords describing the campaign the user is searching",
+                        },
                         "industry": {
                             "type": "string",
-                            "description": "The campaign industry",
+                            "description": "The campaign industry, it can be one between: banking, health, toys, baby, sports. Please keep it lowercase.",
                         },
                         "instagram": {
                             "type": "string",
@@ -41,7 +51,7 @@ class InstagramFunctionsOrchestrator(OrchestratorBase):
                             "description": "Select influencer if the user is searching an influencer or camapign if the user is looking for similar campaign",
                         },
                     },
-                    "required": ["question","industry","instagram","searchType"],
+                    "required": ["question","campaignKeywords","industry","instagram","searchType"],
                 },
             },
             {
@@ -119,6 +129,14 @@ class InstagramFunctionsOrchestrator(OrchestratorBase):
                     result.choices[0].message.function_call.arguments
                 )["question"]
 
+
+                try:
+                    campaignKeywords = json.loads(result.choices[0].message.function_call.arguments)[
+                        "campaignKeywords"
+                    ]
+                except:
+                    logger.info("Failed to retrieve campaignKeywords from response")
+                    campaignKeywords = ""
                 try:
                     searchType = json.loads(result.choices[0].message.function_call.arguments)[
                         "searchType"
@@ -143,8 +161,8 @@ class InstagramFunctionsOrchestrator(OrchestratorBase):
                     industry = ""
                 # run answering chain
                 answering_tool = CampaignInfluencerTool()
-                logger.info(f"Search initiated for {searchType} with industry {industry} and instagram {instagram} and question: {question}")
-                answer = answering_tool.answer_question(question, chat_history, searchType, instagram, industry)
+                logger.info(f"Search initiated for {searchType} with industry {industry} and instagram {instagram}, question: {question} and keywords {campaignKeywords}")
+                answer = answering_tool.answer_question(question, campaignKeywords, chat_history, searchType, instagram, industry)
 
                 self.log_tokens(
                     prompt_tokens=answer.prompt_tokens,
@@ -171,6 +189,16 @@ class InstagramFunctionsOrchestrator(OrchestratorBase):
                 text_processing_tool = TextProcessingTool()
                 answer = text_processing_tool.answer_question(
                     user_message, chat_history, text=text, operation=operation
+                )
+                self.log_tokens(
+                    prompt_tokens=answer.prompt_tokens,
+                    completion_tokens=answer.completion_tokens,
+                )
+            elif result.choices[0].message.function_call.name == "greetings":
+                logger.info("greetings function detected")
+                greetings_tool = GreetingsProcessingTool()
+                answer = greetings_tool.answer_question(
+                    user_message, chat_history
                 )
                 self.log_tokens(
                     prompt_tokens=answer.prompt_tokens,
