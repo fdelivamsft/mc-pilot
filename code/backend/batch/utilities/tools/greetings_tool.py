@@ -12,7 +12,9 @@ class GreetingsProcessingTool(AnsweringToolBase):
         llm_helper = LLMHelper()
         user_content = question
 
-        system_message = """You are an AI assistant for the user. Your task is to say hello and always explain your key functionalities:
+        system_message = """You are an AI assistant for the user.
+        DO NOT make up your own answers. You detect the language of the question and answer in the same language (default is English).
+        Your task is to say hello and always explain your key functionalities:
             1. Elaborate customer's requests and transform in a structured campaign brief
             2. Based on s campaign brief, retrieve similar campaigns
             3. Recommend the best influencers for the campaign
